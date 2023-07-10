@@ -3,8 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Cloudy Mood</title>
     <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fasthand&family=Monoton&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.png" />
   </head>
-  <body></body>
+  <body>
+    <header id="header">
+      <div id="header-title">Cloudy Mood</div>
+    </header>
+    <main id="main">
+      <div id="test"></div>
+    </main>
+    <footer id="footer">
+      <p>
+        Copyright ©
+        <span id="copyright-year">
+          <script>
+            document
+              .getElementById("copyright-year")
+              .appendChild(document.createTextNode(new Date().getFullYear()));
+          </script>
+        </span>
+        <a href="https://github.com/Ayosef16" target="_blank">Ayosef16</a>
+      </p>
+    </footer>
+  </body>
 </html>
