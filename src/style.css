@@ -13,7 +13,7 @@
 
 body {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
   grid:
     "header header header" auto
@@ -36,6 +36,18 @@ body {
 
 #main {
   grid-area: main;
+  background: url(./aurora.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#forecast-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  color: white;
 }
 
 #footer {
