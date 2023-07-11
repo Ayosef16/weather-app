@@ -4,6 +4,7 @@ import { displayCurrentWeather } from "./dom";
 
 const searchCity = document.querySelector(".search-city");
 const searchIcon = document.querySelector(".search-icon");
+const errorContainer = document.querySelector("#error-container");
 
 // Create a function for event listener
 
@@ -19,6 +20,7 @@ export default function createEvents() {
 function checkInputCity() {
   if (searchCity.value.trim() === "") {
     searchCity.value = "";
+    errorContainer.textContent = "Enter a valid city, cannot be blank.";
     return;
   }
   const city = searchCity.value.toLowerCase();

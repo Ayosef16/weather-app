@@ -68,7 +68,7 @@ export async function displayCurrentWeather(city) {
         weather.forecast.forecastday[i + 1].day.condition.icon;
     }
   } catch (error) {
-    errorContainer.textContent = error;
+    errorContainer.textContent = "Enter a valid city, doesn't exist.";
   }
 }
 
@@ -122,7 +122,7 @@ export async function displayDefaultWeather() {
         weather.forecast.forecastday[i + 1].day.condition.icon;
     }
   } catch (error) {
-    errorContainer.textContent = error;
+    errorContainer.textContent = "Enter a valid city, doesn't exist.";
   }
 }
 
