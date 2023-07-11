@@ -9,6 +9,8 @@
 :root {
   --blue: #00bbf0;
   --light-yellow: #f8f398;
+  --red: #ff5757;
+  --green: #5be7a9;
 }
 
 body {
@@ -127,6 +129,40 @@ body {
   font-size: 1rem;
   font-weight: 500;
   color: var(--blue);
+}
+
+#search-container {
+  display: flex;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+#search-container input {
+  outline: none;
+  border-radius: 1rem;
+  border: none;
+  transition: all 200ms ease-in;
+  border: 2px solid var(--green);
+  text-align: center;
+}
+
+#search-container input:focus {
+  border: 2px solid var(--red);
+  transform: scale(1.05);
+}
+
+#search-container input::placeholder {
+  text-align: center;
+  color: black;
+}
+
+#search-container .search-icon {
+  cursor: pointer;
+  transition: opacity 150ms ease-in;
+}
+
+#search-container .search-icon:hover {
+  opacity: 0.7;
 }
 
 #footer {

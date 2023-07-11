@@ -2,7 +2,7 @@ import { parse, format, parseISO } from "date-fns";
 import { getSearchedWeather, getDefaultWeather } from "./logic";
 
 // Define variables
-const forecastedDays = 2;
+export const forecastedDays = 2;
 const forecastTemplate = document.querySelector("#forecast-template");
 const forecastContainer = document.querySelector("#forecast-container");
 const currentCondition = document.querySelector(".current-condition");
@@ -44,6 +44,8 @@ export async function displayDefaultWeather() {
   currentHumidity.textContent = `${weather.current.humidity}%`;
 
   // Display forecast
+
+  // Create variables
   const forecastDate = document.querySelectorAll(".forecast-date");
   const forecastMaxTemperature = document.querySelectorAll(
     ".forecast-max-temperature"
@@ -52,6 +54,8 @@ export async function displayDefaultWeather() {
     ".forecast-min-temperature"
   );
   const forecastIcon = document.querySelectorAll(".forecast-icon");
+
+  // Loop through forecasted days and assign values
   for (let i = 0; i < forecastedDays; i++) {
     forecastDate[i].textContent = format(
       parseISO(weather.forecast.forecastday[i + 1].date),
