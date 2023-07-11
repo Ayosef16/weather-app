@@ -19,6 +19,35 @@
     </header>
     <main id="main">
       <div id="forecast-container"></div>
+      <div id="current-container">
+        <div id="left-panel">
+          <div class="current-weather">Fog</div>
+          <div class="current-city">Santiago, Chile</div>
+          <div class="current-date">Saturday</div>
+          <img src="/" alt="current weather icon" class="current-icon" />
+          <div class="current-temperature">36 C</div>
+        </div>
+        <div id="right-panel">
+          <div class="current-feelslike">
+            <span class="current-stat">Feelslike</span>39 C
+          </div>
+          <div class="current-wind-speed">
+            <span class="current-stat">Wind Speed</span>6.8 km/h
+          </div>
+          <div class="current-visibility">
+            <span class="current-stat">Visibility</span>2 km
+          </div>
+          <div class="current-radiation">
+            <span class="current-stat">Radiation</span>1 UV
+          </div>
+          <div class="current-pressure">
+            <span class="current-stat">Pressure</span>1014 MB
+          </div>
+          <div class="current humidity">
+            <span class="current-stat">Humidity</span>100%
+          </div>
+        </div>
+      </div>
     </main>
     <footer id="footer">
       <p>
@@ -36,9 +65,9 @@
 
     <template id="forecast-template">
       <div class="forecast">
-          <div class="forecast-date">Mon</div>
-          <img class="forecast-icon"></img>
-          <div class="forecast-temperature">35 °C</div>
+        <div class="forecast-date">Mon</div>
+        <img class="forecast-icon" />
+        <div class="forecast-temperature">35 °C</div>
       </div>
     </template>
   </body>

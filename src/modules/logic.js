@@ -1,6 +1,6 @@
-export async function getCurrentWeather() {
+export async function getSearchedWeather() {
   const weatherHeader = await fetch(
-    "https://api.weatherapi.com/v1/current.json?key=62db037f513a4bdcba5133348230607&q=santiago",
+    "https://api.weatherapi.com/v1/forecast.json?key=62db037f513a4bdcba5133348230607&q=santiago&days=3",
     {
       mode: "cors",
     }

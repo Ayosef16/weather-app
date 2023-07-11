@@ -1,5 +1,6 @@
 import "normalize.css";
 import "./style.css";
-import createForecastElements from "./modules/dom";
+import createForecastElements, { displayDefaultWeather } from "./modules/dom";
 
 createForecastElements(2);
+displayDefaultWeather();

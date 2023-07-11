@@ -1,16 +1,17 @@
-import { getCurrentWeather, getDefaultWeather } from "./logic";
+import { getSearchedWeather, getDefaultWeather } from "./logic";
 
 // Define variables
 const forecastTemplate = document.querySelector("#forecast-template");
 const forecastContainer = document.querySelector("#forecast-container");
 
 // async function displayCurrentWeather() {
-//   const weather = await getCurrentWeather();
+//   const weather = await getSearchedWeather();
 // }
 
-// async function displayDefaultWeather() {
-//   const weather = await getDefaultWeather();
-// }
+export async function displayDefaultWeather() {
+  const weather = await getDefaultWeather();
+  console.log(weather);
+}
 
 export default function createForecastElements(number) {
   for (let i = 0; i < number; i++) {
