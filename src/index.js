@@ -1,5 +1,6 @@
 import "normalize.css";
 import "./style.css";
+import createEvents from "./modules/events";
 import createForecastElements, {
   displayDefaultWeather,
   forecastedDays,
@@ -7,3 +8,4 @@ import createForecastElements, {
 
 createForecastElements(forecastedDays);
 displayDefaultWeather();
+createEvents();

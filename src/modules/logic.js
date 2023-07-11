@@ -1,13 +1,11 @@
-export async function getSearchedWeather() {
+export async function getSearchedWeather(city) {
   const weatherHeader = await fetch(
-    "https://api.weatherapi.com/v1/forecast.json?key=62db037f513a4bdcba5133348230607&q=santiago&days=3",
+    `https://api.weatherapi.com/v1/forecast.json?key=62db037f513a4bdcba5133348230607&q=${city}&days=3`,
     {
       mode: "cors",
     }
   );
-  console.log(weatherHeader);
   const weather = await weatherHeader.json();
-  console.log(weather);
   return weather;
 }
 
