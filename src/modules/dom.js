@@ -7,8 +7,14 @@ const forecastContainer = document.querySelector("#forecast-container");
 const currentCondition = document.querySelector(".current-condition");
 const currentCity = document.querySelector(".current-city");
 const currentDate = document.querySelector(".current-date");
-const currentIcon = document.querySelector(".current-icon");
 const currentTemperature = document.querySelector(".current-temperature");
+const currentIcon = document.querySelector(".current-icon");
+const currentFeelslike = document.querySelector(".current-feelslike");
+const currentWindSpeed = document.querySelector(".current-wind-speed");
+const currentVisibility = document.querySelector(".current-visibility");
+const currentRadiation = document.querySelector(".current-radiation");
+const currentPressure = document.querySelector(".current-pressure");
+const currentHumidity = document.querySelector(".current-humidity");
 
 // async function displayCurrentWeather() {
 //   const weather = await getSearchedWeather();
@@ -17,6 +23,8 @@ const currentTemperature = document.querySelector(".current-temperature");
 export async function displayDefaultWeather() {
   const weather = await getDefaultWeather();
   console.log(weather);
+
+  // Display left side panel
   currentCondition.textContent = await weather.current.condition.text;
   currentCity.textContent = `${weather.location.name}, ${weather.location.country}`;
   currentDate.textContent = format(
@@ -25,6 +33,14 @@ export async function displayDefaultWeather() {
   );
   currentTemperature.textContent = `${weather.current.temp_c} °C`;
   currentIcon.src = weather.current.condition.icon;
+
+  // Display right side panel
+  currentFeelslike.textContent = `${weather.current.feelslike_c} °C`;
+  currentWindSpeed.textContent = `${weather.current.wind_kph} KM/H`;
+  currentVisibility.textContent = `${weather.current.vis_km} KM`;
+  currentRadiation.textContent = `${weather.current.uv} UV`;
+  currentPressure.textContent = `${weather.current.pressure_mb} MB`;
+  currentHumidity.textContent = `${weather.current.humidity}%`;
 }
 
 export default function createForecastElements(number) {
