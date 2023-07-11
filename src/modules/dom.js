@@ -1,7 +1,8 @@
-import { parse, format } from "date-fns";
+import { parse, format, parseISO } from "date-fns";
 import { getSearchedWeather, getDefaultWeather } from "./logic";
 
 // Define variables
+const forecastedDays = 2;
 const forecastTemplate = document.querySelector("#forecast-template");
 const forecastContainer = document.querySelector("#forecast-container");
 const currentCondition = document.querySelector(".current-condition");
@@ -41,6 +42,30 @@ export async function displayDefaultWeather() {
   currentRadiation.textContent = `${weather.current.uv} UV`;
   currentPressure.textContent = `${weather.current.pressure_mb} MB`;
   currentHumidity.textContent = `${weather.current.humidity}%`;
+
+  // Display forecast
+  const forecastDate = document.querySelectorAll(".forecast-date");
+  const forecastMaxTemperature = document.querySelectorAll(
+    ".forecast-max-temperature"
+  );
+  const forecastMinTemperature = document.querySelectorAll(
+    ".forecast-min-temperature"
+  );
+  const forecastIcon = document.querySelectorAll(".forecast-icon");
+  for (let i = 0; i < forecastedDays; i++) {
+    forecastDate[i].textContent = format(
+      parseISO(weather.forecast.forecastday[i + 1].date),
+      "EEE"
+    );
+    forecastMaxTemperature[i].textContent = `${
+      weather.forecast.forecastday[i + 1].day.maxtemp_c
+    } °C`;
+    forecastMinTemperature[i].textContent = `${
+      weather.forecast.forecastday[i + 1].day.mintemp_c
+    } °C`;
+    forecastIcon[i].src =
+      weather.forecast.forecastday[i + 1].day.condition.icon;
+  }
 }
 
 export default function createForecastElements(number) {

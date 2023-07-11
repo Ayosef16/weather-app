@@ -50,6 +50,26 @@ body {
   margin-top: 40px;
 }
 
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--light-yellow);
+  border-radius: 1rem;
+  padding: 20px 10px;
+}
+
+.forecast .forecast-date {
+  font-weight: 700;
+}
+
+.forecast .forecast-max-temperature,
+.forecast .forecast-min-temperature {
+  font-size: 0.6rem;
+}
+
 #current-container {
   display: flex;
   align-items: center;
