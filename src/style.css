@@ -114,6 +114,10 @@ body {
   background: var(--blue);
   padding: 10px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 #footer a {
