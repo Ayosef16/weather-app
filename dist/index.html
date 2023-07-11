@@ -18,19 +18,7 @@
       <div id="header-title">Cloudy Mood</div>
     </header>
     <main id="main">
-      <div id="forecast-container">
-        <div class="forecast">
-          <div class="forecast-date">Mon</div>
-          <img-forecast-icon></img-forecast-icon>
-          <div class="forecast-temp">35 °C</div>
-        </div>
-        <div class="forecast">
-          <div class="forecast-date">Mon</div>
-          <img-forecast-icon></img-forecast-icon>
-          <div class="forecast-temp">35 °C</div>
-        </div>
-      </div>
-      <div id="test"></div>
+      <div id="forecast-container"></div>
     </main>
     <footer id="footer">
       <p>
@@ -45,5 +33,13 @@
         <a href="https://github.com/Ayosef16" target="_blank">Ayosef16</a>
       </p>
     </footer>
+
+    <template id="forecast-template">
+      <div class="forecast">
+          <div class="forecast-date">Mon</div>
+          <img class="forecast-icon"></img>
+          <div class="forecast-temperature">35 °C</div>
+      </div>
+    </template>
   </body>
 </html>
