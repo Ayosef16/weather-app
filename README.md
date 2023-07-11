@@ -4,7 +4,7 @@ Cloudy Mood is a weather app that shows the current temperature, wind speed, vis
 
 ### Tools Used
 
-Stacks: html, css, javascript and webpack.
-This app was build upon the information provided by [WeatherAPI]{https://www.weatherapi.com/}.
+Stacks: html, css, javascript and webpack.\
+This app was build upon the information provided by [WeatherAPI](https://www.weatherapi.com/).
 
-#### Check live demo on: [Github]{https://ayosef16.github.io/weather-app/}.
+#### Check live demo on: [Github](https://ayosef16.github.io/weather-app/).
